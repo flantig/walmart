@@ -1,4 +1,4 @@
-import DialogBox from "./Components/Dialog";
+import DialogBox from "../Components/Dialog";
 import React from "react";
 
 
