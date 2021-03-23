@@ -1,7 +1,9 @@
 import DialogBox from "../Components/Dialog";
 import React from "react";
 
-
+/**
+ * @const Options: Handles the general attributes of the datatable, like how many rows, whether you'd like to give the option to filter attributes, etc.
+ */
 const Options = {
     filter: true,
     filterType: 'dropdown',
@@ -18,6 +20,10 @@ const Options = {
     }
 }
 
+
+/**
+ * @const Column: Headers and a custom column that brings up the dialog box for more information
+ */
 function Columns(json) {
 
     return ([{

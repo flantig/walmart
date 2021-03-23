@@ -5,6 +5,13 @@ import {MuiThemeProvider} from '@material-ui/core/styles'
 import Theme from './Styles/Theme'
 import Settings from './Models/TableSettings'
 
+/**
+ * @function retrieveWalmartIssues(): It's a fetch request that pulls in information from the walmart Github issues endpoint
+ *
+ * @component MuiThemeProvider: If you find yourself at ./Styles/Theme.js you'll see a bunch of style options, MUI-Datatable allows you to change a few of those to customize
+ * the table.
+ */
+
 async function retrieveWalmartIssues() {
     const response = await fetch("https://api.github.com/repos/walmartlabs/thorax/issues");
     const jsonData = await response.json();

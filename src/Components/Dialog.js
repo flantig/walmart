@@ -15,16 +15,8 @@ import {
 import Draggable from "react-draggable";
 
 /**
- *
- *  @function DateSubstringGrabber and TimeSubstringGrabber: These are need for the dialog box when presenting information
- *  and also to reformat the datetime back to an ISO 8601 format (i.e. 2020-01-01T01:01:01.000Z) otherwise postgresql won't
- *  accept it.
- *
  *  @return: A lot of the entries are Read-Only on purpose so that users aren't allowed to change entries that shouldn't ever
- *  be changed. This prevents duplicates or changing the wrong row or adding a date/time stamp that couldn't exist.
- *
- *  @component <TextField onInput={input => setNewKW ... > : Again this just further cements my intention above. It essentially just
- *  copies over already fetched data but makes the addition of the new user input.
+ *  be changed. This is also code from another project, I easily could have just added some sort of textbox.
  *
  *  @function handleOpen/Close/Submit: These are just handlers for the dialog box, nothing too crazy.
  *
