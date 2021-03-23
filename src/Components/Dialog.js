@@ -40,6 +40,8 @@ function PaperComponent(props) {
 function DialogBox(props) {
     const [open, setOpen] = React.useState(false);
     const [data, setData] = React.useState(props.data);
+    const [user, setUser] = React.useState(props.user);
+
 
     function handleClickOpen() {
         setOpen(true);
@@ -51,8 +53,8 @@ function DialogBox(props) {
 
 
     useEffect(() => {
-
         setData(props.data);
+        setUser(props.user);
     }, [props])
 
     return (
