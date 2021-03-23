@@ -2,6 +2,7 @@ const {createMuiTheme} = require("@material-ui/core");
 
 
 const Theme = createMuiTheme({
+    walmartLogo: {position: 'absolute', width: '10%', paddingLeft:'50%', paddingTop:'30%'},
     overrides: {
         MuiPaper: {
             root: {

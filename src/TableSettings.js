@@ -1,4 +1,5 @@
 import DialogBox from "./Components/Dialog";
+const {Typography} = require("@material-ui/core");
 import React from "react";
 
 
@@ -41,6 +42,15 @@ function Columns(json) {
         {
             label: "User",
             name: "User",
+            options : {
+                customBodyRender : (value, tableMeta, updateValue) => {
+                    return (
+                        <Typography component={'span'} noWrap={true}>
+                            {value}
+                        </Typography>
+                    )
+                }
+            }
         }])
 }
 

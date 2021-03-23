@@ -41,7 +41,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={"./logo512.png"} style = {{position: 'absolute', width: '10%', paddingLeft:'50%', paddingTop:'30%'}}/>
+                <img src={"./logo512.png"} style = {Theme.walmartLogo}/>
                 {loading && <h3 color="white">loading...</h3>}
                 {!loading && <MuiThemeProvider theme={Theme}> <MUIDataTable data={data} columns={columns} options={options}/> </MuiThemeProvider>}
 

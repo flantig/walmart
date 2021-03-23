@@ -55,15 +55,6 @@ function DialogBox(props) {
         setOpen(false);
     }
 
-    function handleSubmit() {
-        setOpen(false);
-    }
-
-    const writable = {
-        variant: "filled",
-        name: "tacobell"
-    };
-
 
     useEffect(() => {
 
