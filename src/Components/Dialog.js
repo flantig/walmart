@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react'
 import AddIcon from "@material-ui/icons/Add";
+import ReactMarkdown from "react-markdown";
+
 
 const {DateTime} = require("luxon");
 import {
@@ -20,6 +22,8 @@ import Draggable from "react-draggable";
  *
  *  @function handleOpen/Close/Submit: These are just handlers for the dialog box, nothing too crazy.
  *
+ *  @component ReactMarkdown: Formats the issue a bit more, you can pass in a renderer that can properly highlight the codeblocks based on language
+ *
  */
 
 
@@ -36,8 +40,6 @@ function PaperComponent(props) {
 function DialogBox(props) {
     const [open, setOpen] = React.useState(false);
     const [data, setData] = React.useState(props.data);
-    const [user, setUser] = React.useState(props.user);
-
 
     function handleClickOpen() {
         setOpen(true);
@@ -76,7 +78,7 @@ function DialogBox(props) {
                     <TextField disabled label="Status" defaultValue={data.state}/>
                     <DialogContent> </DialogContent>
                     <DialogContentText>
-                        {data.body}
+                        <ReactMarkdown source={data.body} />
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
