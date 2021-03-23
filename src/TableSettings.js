@@ -42,15 +42,6 @@ function Columns(json) {
         {
             label: "User",
             name: "User",
-            options : {
-                customBodyRender : (value, tableMeta, updateValue) => {
-                    return (
-                        <Typography component={'span'} noWrap={true}>
-                            {value}
-                        </Typography>
-                    )
-                }
-            }
         }])
 }
 
